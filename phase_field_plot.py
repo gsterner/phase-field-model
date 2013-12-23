@@ -10,13 +10,14 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import BoundaryNorm
 from matplotlib.ticker import MaxNLocator
 import numpy as np
+#import phase_grid
 
 
 # make these smaller to increase the resolution
 dx, dy = 1, 1
 
 #Grid size
-number_of_grid_points = 200
+number_of_grid_points = 100
 
 # generate 2 2d grids for the x & y bounds
 y, x = np.mgrid[slice(1, number_of_grid_points + dy, dy),
@@ -26,6 +27,10 @@ y, x = np.mgrid[slice(1, number_of_grid_points + dy, dy),
 #z = np.sin(x) ** 10 + np.cos(10 + y * x) * np.cos(x)
 mu, sigma = 0, 0.001 # mean and standard deviation
 z = np.random.normal(mu, sigma, x.shape)
+
+#grid = phase_grid.PhaseGrid(z)
+#print grid.at(0,1)
+#print grid.at(0,101)
 
 
 # x and y are bounds, so z should be the value *inside* those bounds.
