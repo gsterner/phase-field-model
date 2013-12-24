@@ -12,6 +12,18 @@ class PhaseGrid():
     def at(self, x_index, y_index):
         return self.phi[self._get_x_index(x_index)][self._get_y_index(y_index)]
 
+    def set_at(self, x_index, y_index, value):
+        self.phi[self._get_x_index(x_index)][self._get_y_index(y_index)] = value
+
+    def x_size(self):
+        return self.x_length
+
+    def y_size(self):
+        return self.y_length
+
+    def get_mesh(self):
+        return self.phi
+
     def _get_x_index(self, x_index):
         if -1 < x_index < self.x_length:
             return x_index
