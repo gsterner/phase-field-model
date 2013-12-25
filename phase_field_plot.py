@@ -18,10 +18,10 @@ import numpy as np
 dx, dy = 0.8, 0.8
 
 #Grid size
-number_of_grid_points = 100
+number_of_grid_points = 1000
 
 #Time steps
-number_of_time_steps = 100
+number_of_time_steps = 10
 
 # generate 2 2d grids for the x & y bounds
 y, x = np.mgrid[slice(1, number_of_grid_points + dy, dy),

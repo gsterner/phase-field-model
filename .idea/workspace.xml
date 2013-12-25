@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="168def71-dbd9-4196-a528-56e45fb017bd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/explicit_integration.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model_a.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/explicit_integration.py" afterPath="$PROJECT_DIR$/explicit_integration.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phase_field_plot.py" afterPath="$PROJECT_DIR$/phase_field_plot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phase_grid.py" afterPath="$PROJECT_DIR$/phase_grid.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="phase-field-model.iws" />
@@ -18,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/phase-field-model$phase_field_plot.coverage" NAME="phase_field_plot Coverage Results" MODIFIED="1387926215261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/phase-field-model$phase_field_plot.coverage" NAME="phase_field_plot Coverage Results" MODIFIED="1388007334486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -35,7 +33,7 @@
       <file leaf-file-name="phase_field_plot.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/phase_field_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="26" selection-start="371" selection-end="371" vertical-scroll-proportion="0.6648936" vertical-offset="110" max-vertical-offset="1350">
+            <state line="11" column="42" selection-start="203" selection-end="203" vertical-scroll-proportion="0.5265958" vertical-offset="0" max-vertical-offset="1350">
               <folding />
             </state>
           </provider>
@@ -44,7 +42,7 @@
       <file leaf-file-name="phase_grid.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/phase_grid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="23" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="846">
+            <state line="24" column="23" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="846">
               <folding>
                 <marker date="1387924858415" expanded="true" signature="400:481" placeholder="..." />
                 <marker date="1387924858415" expanded="true" signature="556:585" placeholder="..." />
@@ -68,9 +66,9 @@
       <file leaf-file-name="explicit_integration.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/explicit_integration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+            <state line="22" column="23" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="253" max-vertical-offset="648">
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,8 +93,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/phase_grid.py" />
-        <option value="$PROJECT_DIR$/explicit_integration.py" />
         <option value="$PROJECT_DIR$/model_a.py" />
+        <option value="$PROJECT_DIR$/explicit_integration.py" />
         <option value="$PROJECT_DIR$/phase_field_plot.py" />
       </list>
     </option>
@@ -133,6 +131,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -153,18 +152,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="appearance" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -277,9 +275,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -301,6 +296,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -384,7 +382,11 @@
       <created>1387834187356</created>
       <updated>1387834187356</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="First implementation of explicit time integration of model A. Simple coarsening can now be simulated.">
+      <created>1387926331594</created>
+      <updated>1387926331594</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -421,7 +423,8 @@
     </option>
     <MESSAGE value="Generate start gaussian start values and plot those in single mesh." />
     <MESSAGE value="Implement grid class for handling phase field and periodic boundary conditions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement grid class for handling phase field and periodic boundary conditions" />
+    <MESSAGE value="First implementation of explicit time integration of model A. Simple coarsening can now be simulated." />
+    <option name="LAST_COMMIT_MESSAGE" value="First implementation of explicit time integration of model A. Simple coarsening can now be simulated." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -429,6 +432,42 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/phase_field_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="26" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="110" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phase_grid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="23" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="846">
+          <folding>
+            <marker date="1387924858415" expanded="true" signature="400:481" placeholder="..." />
+            <marker date="1387924858415" expanded="true" signature="556:585" placeholder="..." />
+            <marker date="1387924858415" expanded="true" signature="610:634" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model_a.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="63" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="468">
+          <folding>
+            <marker date="1387925134836" expanded="true" signature="442:508" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/explicit_integration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/phase_field_plot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="10" selection-start="0" selection-end="1545" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="1206">
@@ -502,15 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/explicit_integration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model_a.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="63" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="468">
@@ -520,9 +550,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/explicit_integration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="23" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="253" max-vertical-offset="648">
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/phase_field_plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="26" selection-start="371" selection-end="371" vertical-scroll-proportion="0.6648936" vertical-offset="110" max-vertical-offset="1350">
+        <state line="11" column="42" selection-start="203" selection-end="203" vertical-scroll-proportion="0.5265958" vertical-offset="0" max-vertical-offset="1350">
           <folding />
         </state>
       </provider>
