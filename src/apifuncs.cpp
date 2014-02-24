@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <iostream>
+#include <vector>
+using std::vector;
 
 void printInCpp()
 {
@@ -8,10 +10,11 @@ void printInCpp()
 
 void copyPointerToVector(double *array_pointer, int array_size)
 {
+  vector<double> data(array_pointer, array_pointer + sizeof(double)*array_size);
 
   for(int i=0; i < array_size; i++)
   {
-    std::cout << array_pointer[i] <<  std::endl;
+    std::cout << data.at(i) <<"yeah" <<  std::endl;
       
   }
  
