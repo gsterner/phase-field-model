@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector>
+#include "grid.h"
 using std::vector;
+
 
 
 void printMatrix(vector<double> *matrix, int width, int height)

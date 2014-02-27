@@ -2,7 +2,7 @@ from ctypes import *
 import numpy as np
 
 slib   = 'libphasefieldmodela.so'
-hlib   = CDLL(slib)
+hlib   = CDLL(slib, mode=RTLD_GLOBAL)
 
 array_length = 10
 array_type = c_double * array_length

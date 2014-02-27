@@ -1,5 +1,17 @@
 #include <stdio.h>
+#include <iostream>
 #include "grid.h"
+using std::cout;
+//using Grid::Grid;
+
+void copyPointerToMatrixCpp(double *matrix_p, int rows, int cols)
+{
+  Grid grid = Grid(); 
+  grid.set_abc(5);
+  cout << "abc" << grid.get_abc() << std::endl;
+  //grid.copyPointerToMatrix(matrix_p, rows, cols);
+}
+
 
 extern "C"
 {
@@ -11,7 +23,8 @@ extern "C"
   void print_array(double *test_array, int array_size) 
   {
     int i;
-    copyPointerToVector(test_array, array_size);
+    Grid grid = Grid(); 
+    //grid.copyPointerToVector(test_array, array_size);
     for(i = 0; i < 10; i++)
       {
 	printf("%f\n", test_array[i]);
@@ -20,8 +33,8 @@ extern "C"
   }
 
   void print_matrix(double *matrix_p, int rows, int cols)
-  {
-    copyPointerToMatrix(matrix_p, rows, cols);
+  {   
+    copyPointerToMatrixCpp(matrix_p, rows, cols);
   }
 
 
