@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include "grid.h"
+#include "physics.h"
 using std::cout;
 //using Grid::Grid;
 
@@ -10,6 +11,7 @@ void copyPointerToMatrixCpp(double *matrix_p, int rows, int cols)
   grid.printMatrix();
   grid.setAt(0,0,0.3333);
   grid.printMatrix();
+  cout << "laplace " << laplace(0.3,0.1,0.1,0.1,0.1) << std::endl;
 }
 
 
