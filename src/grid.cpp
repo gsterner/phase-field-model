@@ -4,6 +4,7 @@
 #include "grid.h"
 using std::vector;
 
+//-------------------------
 Grid::Grid(double *matrix_p, int rows, int cols)
 {
   numberRows = rows;
@@ -20,12 +21,19 @@ Grid::Grid(double *matrix_p, int rows, int cols)
   }
 }
 
+//-------------------------
 double Grid::at(int row, int col)
 {
   return data.at(calcXIndex(row)).at(calcYIndex(col));
 }
 
+//-------------------------
+void Grid::setAt(int row, int col, double value)
+{
+  data.at(calcXIndex(row)).at(calcYIndex(col)) = value; 
+}
 
+//-------------------------
 void Grid::printMatrix()
 {
   for(std::vector<vector<double> >::iterator it_rows = data.begin(); it_rows != data.end(); ++it_rows)

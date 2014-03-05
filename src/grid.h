@@ -17,6 +17,8 @@ class Grid
   Grid(double *matrix_p, int rows, int cols);
 
   double at(int row, int col);
+  void setAt(int row, int col, double value);
+
   void printMatrix();
   void copyPointerToMatrix(double *matrix_p, int rows, int cols);
 };

@@ -8,7 +8,8 @@ void copyPointerToMatrixCpp(double *matrix_p, int rows, int cols)
 {
   Grid grid = Grid(matrix_p, rows, cols);
   grid.printMatrix();
-  cout << grid.at(3,1) << std::endl;
+  grid.setAt(0,0,0.3333);
+  grid.printMatrix();
 }
 
 
