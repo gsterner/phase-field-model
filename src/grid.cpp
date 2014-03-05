@@ -6,6 +6,8 @@ using std::vector;
 
 Grid::Grid(double *matrix_p, int rows, int cols)
 {
+  numberRows = rows;
+  numberCols = cols;
 
   data = vector<vector<double> >(rows, vector<double>(cols));
   
@@ -18,6 +20,10 @@ Grid::Grid(double *matrix_p, int rows, int cols)
   }
 }
 
+double Grid::at(int row, int col)
+{
+  return data.at(calcXIndex(row)).at(calcYIndex(col));
+}
 
 
 void Grid::printMatrix()
@@ -32,7 +38,34 @@ void Grid::printMatrix()
   } 
 
 }
+//-------------------------
+int Grid::calcXIndex(int index)
+{
+  return wrapIndex(index, numberRows);
+}
 
+//-------------------------
+int Grid::calcYIndex(int index)
+{
+  return wrapIndex(index, numberCols);
+}
+
+//-------------------------
+int Grid::wrapIndex(int index, int dimensionLength)
+{
+  if(-1 < index && index < dimensionLength)
+    {
+      return index;
+    }
+  else if(index < 0)
+    {
+      return dimensionLength + index;
+    }
+  else
+    {
+      return index - dimensionLength;
+    }        
+}
 
 void copyPointerToVector(double *array_pointer, int array_size)
 {
