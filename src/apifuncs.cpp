@@ -6,10 +6,8 @@ using std::cout;
 
 void copyPointerToMatrixCpp(double *matrix_p, int rows, int cols)
 {
-  Grid grid = Grid(); 
-  grid.set_abc(5);
-  cout << "abc" << grid.get_abc() << std::endl;
-  //grid.copyPointerToMatrix(matrix_p, rows, cols);
+  Grid grid = Grid(matrix_p, rows, cols);
+  grid.printMatrix();
 }
 
 
@@ -23,7 +21,7 @@ extern "C"
   void print_array(double *test_array, int array_size) 
   {
     int i;
-    Grid grid = Grid(); 
+    //Grid grid = Grid(); 
     //grid.copyPointerToVector(test_array, array_size);
     for(i = 0; i < 10; i++)
       {

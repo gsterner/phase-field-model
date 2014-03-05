@@ -4,22 +4,33 @@
 #include "grid.h"
 using std::vector;
 
-
-
-void printMatrix(vector<double> *matrix, int width, int height)
+Grid::Grid(double *matrix_p, int rows, int cols)
 {
-  //Needs to be rewritten for vector of vectors implementation
-  std::cout << "wifth" << width << std::endl;   
-  std::cout << "height" << height << std::endl; 
-  for(int i=0; i < width; i++)
+
+  data = vector<vector<double> >(rows, vector<double>(cols));
+  
+  for(int i=0; i < rows; i++)
   {
-    for(int j=0; j < height; j++)
-    {
-      std::cout << matrix->at(i+j);
-    }  
+    int start = i * cols;
+    int end = (i+1) * cols;
+    vector<double>  row(matrix_p + start , matrix_p + end );
+    data.at(i) = row;   
+  }
+}
+
+
+
+void Grid::printMatrix()
+{
+  for(std::vector<vector<double> >::iterator it_rows = data.begin(); it_rows != data.end(); ++it_rows)
+  {
+    for(std::vector<double>::iterator it_elem = it_rows->begin(); it_elem != it_rows->end(); ++it_elem)
+    {  
+      std::cout << *it_elem << " ";
+    }
     std::cout << std::endl;
   } 
-  
+
 }
 
 
@@ -35,10 +46,10 @@ void copyPointerToVector(double *array_pointer, int array_size)
  
 }
 
-void copyPointerToMatrix(double *matrix_p, int rows, int cols)
+void Grid::copyPointerToMatrix(double *matrix_p, int rows, int cols)
 {
 
-  vector<vector<double> > data(rows, vector<double>(cols));
+  data = vector<vector<double> >(rows, vector<double>(cols));
   
   for(int i=0; i < rows; i++)
   {
