@@ -5,6 +5,18 @@
 using std::cout;
 //using Grid::Grid;
 
+void printInData(double *matrix_p, int rows, int cols, double delta_x, double delta_t, int time_steps)
+{
+  Grid grid = Grid(matrix_p, rows, cols);
+  cout << "-------------" << std::endl;
+  grid.printMatrix();
+  cout << "-------------" << std::endl;
+  cout << "delta_x " << delta_x << std::endl;
+  cout << "delta_t " << delta_t << std::endl;
+  cout << "time_steps " << time_steps << std::endl;
+
+}
+
 void copyPointerToMatrixCpp(double *matrix_p, int rows, int cols)
 {
   Grid grid = Grid(matrix_p, rows, cols);
@@ -43,6 +55,15 @@ extern "C"
     copyPointerToMatrixCpp(matrix_p, rows, cols);
   }
 
+  void model_a_integration(double *matrix_p, 
+			   int rows, 
+			   int cols, 
+			   double delta_x,
+			   double delta_t,
+			   int time_steps)
+  {
+    printInData(matrix_p, rows, cols, delta_x, delta_t, time_steps);
+  }
 
 }
 
