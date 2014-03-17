@@ -8,10 +8,14 @@ using std::cout;
 void copyPointerToMatrixCpp(double *matrix_p, int rows, int cols)
 {
   Grid grid = Grid(matrix_p, rows, cols);
+  cout << "-------------" << std::endl;
   grid.printMatrix();
+  cout << "-------------" << std::endl;
   grid.setAt(0,0,0.3333);
   grid.printMatrix();
-  cout << "laplace " << laplace(0.3,0.1,0.1,0.1,0.1) << std::endl;
+  cout << "-------------" << std::endl;
+  grid.copyMatrixToPointer(matrix_p);
+  // cout << "laplace " << laplace(0.3,0.1,0.1,0.1,0.1) << std::endl;
 }
 
 

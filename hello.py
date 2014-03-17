@@ -18,5 +18,7 @@ cols = np.shape(n_array)[1]
 #hlib.print_array(n_array_p, len(n_array))
 hlib.print_matrix(n_array_p, rows, cols)
 
+print('->Python<-')
+print(n_array)
 #print(hlib.g_func())
 

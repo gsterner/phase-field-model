@@ -47,6 +47,21 @@ void Grid::printMatrix()
 
 }
 //-------------------------
+void Grid::copyMatrixToPointer(double *matrix_p)
+{
+  int elementCounter = 0;
+  for(std::vector<vector<double> >::iterator it_rows = data.begin(); it_rows != data.end(); ++it_rows)
+  {
+    for(std::vector<double>::iterator it_elem = it_rows->begin(); it_elem != it_rows->end(); ++it_elem)
+    {  
+      matrix_p[elementCounter] = *it_elem;
+      elementCounter++;
+    }
+  } 
+
+}
+
+//-------------------------
 int Grid::calcXIndex(int index)
 {
   return wrapIndex(index, numberRows);
