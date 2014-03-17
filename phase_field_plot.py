@@ -1,4 +1,6 @@
 import explicit_integration
+import hello
+import time as local_time
 
 __author__ = 'gustaf'
 
@@ -18,10 +20,10 @@ import numpy as np
 dx, dy = 0.8, 0.8
 
 #Grid size
-number_of_grid_points = 1000
+number_of_grid_points = 500
 
 #Time steps
-number_of_time_steps = 10
+number_of_time_steps = 100
 
 # generate 2 2d grids for the x & y bounds
 y, x = np.mgrid[slice(1, number_of_grid_points + dy, dy),
@@ -33,7 +35,13 @@ mu, sigma = 0, 0.001 # mean and standard deviation
 z = np.random.normal(mu, sigma, x.shape)
 
 z_start = z.copy()
-z = explicit_integration.do_integration(z, dx, 0.1, number_of_time_steps)
+
+time_one = local_time.time()
+#z = explicit_integration.do_integration(z, dx, 0.1, number_of_time_steps)
+z = hello.model_a_cpp(z, dx, 0.1, number_of_time_steps)
+time_two = local_time.time()
+print('time taken: ' + str(time_two - time_one) + '\n')
+
 
 # x and y are bounds, so z should be the value *inside* those bounds.
 # Therefore, remove the last value from the z array.
