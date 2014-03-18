@@ -20,10 +20,10 @@ import numpy as np
 dx, dy = 0.8, 0.8
 
 #Grid size
-number_of_grid_points = 500
+number_of_grid_points = 400
 
 #Time steps
-number_of_time_steps = 100
+number_of_time_steps = 3000
 
 # generate 2 2d grids for the x & y bounds
 y, x = np.mgrid[slice(1, number_of_grid_points + dy, dy),
@@ -32,6 +32,7 @@ y, x = np.mgrid[slice(1, number_of_grid_points + dy, dy),
 
 #z = np.sin(x) ** 10 + np.cos(10 + y * x) * np.cos(x)
 mu, sigma = 0, 0.001 # mean and standard deviation
+np.random.seed(42)
 z = np.random.normal(mu, sigma, x.shape)
 
 z_start = z.copy()
@@ -65,9 +66,9 @@ norm = BoundaryNorm(levels, ncolors=cmap.N, clip=True)
 #             y[:-1, :-1] + dy / 2., z,
 #             cmap=cmap)
 
-plt.figure(1)
-plt.contourf(x[:-1, :-1] + dx / 2., y[:-1, :-1] + dy / 2., z_start, levels=levels_start,cmap=cmap)
-plt.colorbar()
+#plt.figure(1)
+#plt.contourf(x[:-1, :-1] + dx / 2., y[:-1, :-1] + dy / 2., z_start, levels=levels_start,cmap=cmap)
+#plt.colorbar()
 
 plt.figure(2)
 plt.contourf(x[:-1, :-1] + dx / 2., y[:-1, :-1] + dy / 2., z, levels=levels,cmap=cmap)
