@@ -1,0 +1,6 @@
+package phasefield;
+
+message SetupData {
+  optional int32 time_steps = 1; 
+  }
+
