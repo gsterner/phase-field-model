@@ -1,6 +1,17 @@
 package phasefield;
 
 message SetupData {
-  optional int32 time_steps = 1; 
+  optional int32 time_steps = 1;
+  optional Field phase_field = 2; 
+
+  message Field {
+
+   repeated Row row = 3;
+   
+   message Row {
+     repeated double element = 4 [packed=true];
+   }
+
   }
+}
 
